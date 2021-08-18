@@ -58,6 +58,15 @@
     margin: 20px;
 }
 
+.mv-5 {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+.mv-10 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
 .mt-5 {
     margin-top: 5px;
 }
@@ -120,8 +129,14 @@
     grid-template-columns: 1fr 1fr;
 }
 
-.grid-gap-10 {
+.gap-5 {
+    gap: 5px;
+}
+.gap-10 {
     gap: 10px;
+}
+.gap-20 {
+    gap: 20px;
 }
 
 .text-center {

@@ -8,12 +8,17 @@
     --foreground-dark: #d7d6d6;
     --foreground-white: white;
 }
-
 /* Custom Button */
 .custom-button {
     height: 30px;
     border-radius: 4px;
     color: white;
+    padding: 0;
+    border: none;
+    background: none;
+    transition: 0.2s all;
+    cursor: pointer;
+    border: 1px solid var(--color-text-icons);
 }
 .custom-button:hover {
     filter: brightness(90%);
@@ -29,12 +34,12 @@
     border: 1px solid var(--status-info);
 }
 .custom-button label {
-    font-size: 1rem;
+    font-size: 0.8rem;
     text-align: center;
     padding-left: 10px;
     padding-right: 10px;
     cursor: pointer;
-    font-weight: bold;
+    font-weight: 600;
 }
 .custom-button:disabled label {
     cursor: default;
@@ -42,68 +47,51 @@
 
 /* CustomInput */
 .custom-input {
-    border-radius: 4px;
-    border: 1px solid var(--foreground-dark);
     height: 30px;
+    border-radius: 4px;
+    background-color: var(--foreground-white);
+    width: 100%;
+}
+
+.custom-input input {   
+    border: 1px solid var(--foreground-dark);
+    height: 100%;
     min-width: 0;
     width: 100%;
-
-    background-color: var(--foreground-white);
-
     font-size: 14px;
     line-height: 21px;
+    padding-left: 10px;
+    padding-right: 10px;
 }
-.custom-input:focus {
+.custom-input input:disabled {
+    filter: brightness(90%);
+    cursor: default;
+}
+.custom-input input:focus {
     border: 1px solid var(--status-info);
 }
 .custom-input-error {
     border: 1px solid var(--status-danger);
 }
 
-.custom-input-button {
-    width: 110px;
-    height: 30px;
+.custom-input div {
+    height: 100%;
     border: 1px solid var(--foreground-dark);
-    background-color: var(--foreground-white);
+    padding-left: 10px;
+    padding-right: 10px;
     border-top-right-radius: 4px;
     border-bottom-right-radius: 4px;
-
-    box-sizing: border-box;
 }
-
-.custom-input-button:hover {
-    background-color: var(--foreground-dark);
+.custom-input button {
+    height: 100%;
+    border: 1px solid var(--foreground-dark);
+    padding-left: 10px;
+    padding-right: 10px;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
 }
-
-.custom-input-button:active {
-    border: 1px solid var(--status-info);
-}
-
-.no-right-border-radius {
-    border-top-right-radius: 0px;
-    border-bottom-right-radius: 0px;
-    border-right: 0px;
-}
-
-.custom-button-label {
-    color: var(--foreground-white);
-    font-weight: 600;
-}
-
-.custom-button-icon-container {
-    width: 30px;
-    height: 30px;
-    border-left: 1px solid var(--foreground-dark);
-    color: var(--foreground-white);
-}
-
-.cib-extended {
-    width: 140px;
-    border-radius: 4px;
-}
-
-.custom-checkbox {
-    color: brown;
+.custom-input button:hover {
+    background-color: #17a2b8;
 }
 
 /* Modal */

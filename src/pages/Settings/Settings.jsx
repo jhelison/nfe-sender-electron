@@ -1,12 +1,20 @@
-import React from 'react'
-import Content from '../../components/template/Content'
+import React from "react"
+import Content from "../../components/template/Content"
 
-import { CustomTextInput } from '../../components/CustomComponents'
- 
+import { FiSearch } from "react-icons/fi"
+
+import {
+    CustomTextInput,
+    CustomButton,
+} from "../../components/CustomComponents"
+
 const Settings = (props) => {
     return (
         <Content title="Configurações Gerais">
-            <CustomTextInput/>
+            <div className="d-grid grid-1-1 gap-10">
+                    <CustomTextInput disabled label="asd" inputText="asd" isButton />
+                    <CustomTextInput label="asd"/>
+            </div>
         </Content>
     )
 }

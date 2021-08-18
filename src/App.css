@@ -23,6 +23,7 @@ button {
     background: none;
     transition: 0.2s all;
     cursor: pointer;
+    box-sizing: border-box;
 }
 
 h1 {

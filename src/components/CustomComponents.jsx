@@ -4,9 +4,7 @@ import "./CustomComponents.css"
 import "./utilities.css"
 
 export const Loading = (props) => {
-    return (
-        <div class="loader"></div>
-    )
+    return <div class="loader"></div>
 }
 
 export const CustomButton = (props) => {
@@ -30,7 +28,7 @@ export const CustomButton = (props) => {
                 <label
                     style={{
                         color: props.outline ? `var(${getColor()})` : "",
-                        visibility: props.loading ? "hidden" : ""
+                        visibility: props.loading ? "hidden" : "",
                     }}
                 >
                     {props.label}
@@ -44,18 +42,18 @@ export const CustomButton = (props) => {
         if (props.icon) {
             return (
                 <div
-                className="d-flex flex-center"
-                style={{
-                    width: "35px",
-                    height: "35px",
-                    backgroundColor: props.label
-                        ? "rgba(0, 0, 0, 0.1)"
-                        : "",
-                    color: props.outline ? `var(${getColor()})` : "",
-                    visibility: props.loading ? "hidden" : ""
-                }}
-            >
-                {<props.icon size={props.iconSize ? props.iconSize : 20} />}
+                    className="d-flex flex-center"
+                    style={{
+                        width: "29px",
+                        height: "29px",
+                        backgroundColor: props.label
+                            ? "rgba(0, 0, 0, 0.1)"
+                            : "",
+                        color: props.outline ? `var(${getColor()})` : "",
+                        visibility: props.loading ? "hidden" : "",
+                    }}
+                >
+                    {<props.icon size={props.iconSize ? props.iconSize : 15} />}
                 </div>
             )
         }
@@ -93,17 +91,45 @@ export const CustomSelect = (props) => {
 }
 
 export const CustomTextInput = (props) => {
+    const inputText = props.inputText ? (
+        props.isButton ? (
+            <button className="d-flex flex-center" onClick={props.onClick}>
+                {props.inputText}
+            </button>
+        ) : (
+            <div className="d-flex flex-center">
+                <label>{props.inputText}</label>
+            </div>
+        )
+    ) : null
+
+    const label = props.label ? (
+        <label className="mv-5" htmlFor={props.id}>
+            {props.label}
+        </label>
+    ) : null
+
     return (
-        <InputMask
-            id={props.id}
-            spellCheck="false"
-            placeholder={props.placeholder}
-            className={
-                "custom-input pl-10" +
-                (props.error ? " custom-input-error" : "")
-            }
-            mask={props.mask}
-            maskChar={props.maskChar}
-        />
+        <div className="d-flex flex-column">
+            {label}
+
+            <div className="custom-input d-flex flex-center">
+                <InputMask
+                    style={{
+                        borderTopLeftRadius: "4px",
+                        borderBottomLeftRadius: "4px",
+                        borderTopRightRadius: props.inputText ? "" : "4px",
+                        borderBottomRightRadius: props.inputText ? "" : "4px",
+                    }}
+                    id={props.id}
+                    spellCheck="false"
+                    placeholder={props.placeholder}
+                    mask={props.mask}
+                    maskChar={props.maskChar}
+                    disabled={props.disabled}
+                />
+                {inputText}
+            </div>
+        </div>
     )
 }
