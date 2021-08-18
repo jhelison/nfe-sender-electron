@@ -12,11 +12,12 @@ const MessageModal = (props) => {
             onRequestClose={props.onRequestClose}
             className="modal"
             overlayClassName="modal-overlay"
+            ariaHideApp={false}
         >
             <h2>{props.title}</h2>
-            <hr class="solid"/>
+            <hr className="solid"/>
             <label className="mt-5">{props.text}</label>
-            <hr class="solid"/>
+            <hr className="solid"/>
 
             <div className="d-flex just-content-end grid-gap-10 mt-10">
                 {props.backButton ? (
