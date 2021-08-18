@@ -69,20 +69,20 @@ const Aside = (props) => {
                 </div>
 
                 <div className="mt-18">
-                    <div
+                    <button
                         className="d-flex flex-center aside-button"
                         id="aside-settings"
                         onClick={() => updateURL("/")}
                     >
                         <FiSettings size={iconSize} />
-                    </div>
-                    <div
+                    </button>
+                    <button
                         className="d-flex flex-center aside-button mt-20"
                         id="aside-companies"
                         onClick={() => updateURL("/companies")}
                     >
                         <BsBuilding size={iconSize} />
-                    </div>
+                    </button>
                 </div>
             </div>
 
@@ -95,12 +95,12 @@ const Aside = (props) => {
                     <div className="status-ball bg-color-danger" />
                     <span>Status Sefaz</span>
                 </div>
-                <div
+                <button
                     className="d-flex flex-center aside-button mb-10"
                     onClick={() => setIsModal(true)}
                 >
                     <FiLogOut size={iconSize} />
-                </div>
+                </button>
             </div>
         </aside>
     )

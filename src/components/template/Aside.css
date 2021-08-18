@@ -22,7 +22,6 @@ aside {
 .aside-button:hover {
     border: 1px solid var(--status-sucess);
     box-sizing: border-box;
-    color: var(--status-sucess);
 }
 
 .aside-button:active {
