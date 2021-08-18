@@ -1,0 +1,54 @@
+aside {
+    width: var(--aside-width);
+    height: 100vh;
+    background-color: var(--foreground-dark);
+    position: absolute;
+}
+
+.nfe-logo {
+    width: 30px;
+    height: 32px;
+    color: var(--color-text-icons);
+}
+
+.aside-button {
+    width: 40px;
+    height: 40px;
+    color: var(--color-text-icons);
+    border-radius: 5px;
+    transition: 0.2s;
+}
+
+.aside-button:hover {
+    border: 1px solid var(--status-sucess);
+    box-sizing: border-box;
+    color: var(--status-sucess);
+}
+
+.aside-button:active {
+    color: white;
+    background-color: var(--status-sucess);
+}
+
+.aside-button-selected {
+    color: white;
+    background-color: var(--status-sucess);
+    pointer-events: none;
+}
+
+.mt-18 {
+    margin-top: 18px;
+}
+
+.status-ball {
+    width: 15px;
+    height: 15px;
+    border-radius: 15px;
+}
+
+aside span {
+    font-size: 12px;
+    line-height: 15px;
+    text-align: center;
+    color: var(--color-text-icons);
+}

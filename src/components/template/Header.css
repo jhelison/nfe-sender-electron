@@ -1,0 +1,27 @@
+header {
+    background-color: var(--foreground-dark);
+    width: calc(100vw - var(--aside-width));
+    height: var(--header-height);
+    margin-left: var(--aside-width);
+    position: absolute;
+}
+
+.drag-region {
+    -webkit-app-region: drag;
+    flex-grow: 1;
+}
+
+header button {
+    width: var(--header-height);
+    height: var(--header-height);
+    transition: 0.2s;
+    transition: 0.2s all;
+    cursor: default;
+}
+
+header button:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+header button:active {
+    background-color: rgba(0, 0, 0, 0.3);
+}

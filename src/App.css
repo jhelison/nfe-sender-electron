@@ -1,0 +1,40 @@
+@import "./assets/fonts/inter/stylesheet.css";
+
+:root {
+    --background-color: #fafafa;
+    --color-text-icons: #6C757D;
+
+    --header-height: 30px;
+    --aside-width: 60px;
+}
+*{
+    font-family: Inter, serif;
+    box-sizing: border-box;
+}
+*:focus {
+    outline: 0;
+    outline-color: transparent;
+    outline-style: none;
+}
+
+button {
+    padding: 0;
+    border: none;
+    background: none;
+    transition: 0.2s all;
+    cursor: pointer;
+}
+
+h1 {
+    font-size: 24px;
+    line-height: 20px;
+    font-style: normal;
+    font-weight: bold;
+}
+
+h2 {
+    font-size: 16px;
+    line-height: 20px;
+    font-style: normal;
+    font-weight: bold;
+}
