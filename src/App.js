@@ -6,6 +6,7 @@ import "./App.css"
 
 import Aside from './components/template/Aside'
 import Header from './components/template/Header'
+import Settings from "./pages/Settings/Settings"
 
 function App() {
 
@@ -13,6 +14,7 @@ function App() {
         <HashRouter>
             <Aside/>
             <Header/>
+            <Settings/>
         </HashRouter>
     )
 }

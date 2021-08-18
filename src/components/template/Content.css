@@ -4,11 +4,11 @@ main {
     height: calc(100vh - var(--header-height));
     margin-top: var(--header-height);
     margin-left: var(--aside-width);
-    background-color: var(--background);
 }
 
 main h1 {
     line-height: 20px;
+    font-weight: normal;
 }
 
 .main-back-button {
@@ -25,11 +25,4 @@ main h1 {
 .main-back-button:active {
     background-color: var(--foreground-dark);
     border: 1px solid var(--status-sucess);
-}
-
-.main-children-container {
-    position: absolute;
-    width: 411px;
-    height: 425px;
-    top: 60px;
 }
