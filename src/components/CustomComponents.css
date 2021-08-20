@@ -8,6 +8,30 @@
     --foreground-dark: #d7d6d6;
     --foreground-white: white;
 }
+
+button {
+    padding: 0;
+    border: none;
+    background: none;
+    transition: 0.2s all;
+    cursor: pointer;
+    box-sizing: border-box;
+    transition: filter 0.2s;
+}
+button:hover {
+    filter: brightness(90%);
+}
+button:active {
+    filter: brightness(70%);
+}
+button:disabled {
+    filter: brightness(50%);
+    cursor: default;
+}
+button:focus {
+    border: 2px solid var(--status-info);
+}
+
 /* Custom Button */
 .custom-button {
     height: 30px;
@@ -19,19 +43,6 @@
     transition: 0.2s all;
     cursor: pointer;
     border: 1px solid var(--color-text-icons);
-}
-.custom-button:hover {
-    filter: brightness(90%);
-}
-.custom-button:active {
-    filter: brightness(70%);
-}
-.custom-button:disabled {
-    filter: brightness(50%);
-    cursor: default;
-}
-.custom-button:focus {
-    border: 1px solid var(--status-info);
 }
 .custom-button label {
     font-size: 0.8rem;
@@ -68,7 +79,7 @@
     cursor: default;
 }
 .custom-input input:focus {
-    border: 1px solid var(--status-info);
+    border: 2px solid var(--status-info);
 }
 .custom-input-error {
     border: 1px solid var(--status-danger);
@@ -89,9 +100,10 @@
     padding-right: 10px;
     border-top-right-radius: 4px;
     border-bottom-right-radius: 4px;
+    background-color: white;
 }
 .custom-input button:hover {
-    background-color: #17a2b8;
+    filter: brightness(90%);
 }
 
 /* Modal */

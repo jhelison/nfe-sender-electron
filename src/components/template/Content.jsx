@@ -22,7 +22,7 @@ const Content = (props) => {
                 <section>{props.children}</section>
 
                 {props.footer ? (
-                    <section>
+                    <section className="content-footer">
                         <hr className="solid" />
                         {props.footer}
                     </section>

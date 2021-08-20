@@ -90,45 +90,55 @@ export const CustomSelect = (props) => {
     )
 }
 
-export const CustomTextInput = (props) => {
-    const inputText = props.inputText ? (
-        props.isButton ? (
-            <button className="d-flex flex-center" onClick={props.onClick}>
-                {props.inputText}
+export const CustomTextInput = ({
+    inputText,
+    isButton,
+    onClick,
+    label,
+    id,
+    placeholder,
+    mask,
+    maskChar,
+    disabled,
+}) => {
+    const inputTextComponent = inputText ? (
+        isButton ? (
+            <button className="d-flex flex-center" onClick={onClick}>
+                {inputText}
             </button>
         ) : (
             <div className="d-flex flex-center">
-                <label>{props.inputText}</label>
+                <label>{inputText}</label>
             </div>
         )
     ) : null
 
-    const label = props.label ? (
-        <label className="mv-5" htmlFor={props.id}>
-            {props.label}
+    const labelComponent = label ? (
+        <label className="mv-5" htmlFor={id}>
+            {label}
         </label>
     ) : null
 
     return (
         <div className="d-flex flex-column">
-            {label}
+            {labelComponent}
 
             <div className="custom-input d-flex flex-center">
                 <InputMask
                     style={{
                         borderTopLeftRadius: "4px",
                         borderBottomLeftRadius: "4px",
-                        borderTopRightRadius: props.inputText ? "" : "4px",
-                        borderBottomRightRadius: props.inputText ? "" : "4px",
+                        borderTopRightRadius: inputText ? "" : "4px",
+                        borderBottomRightRadius: inputText ? "" : "4px",
                     }}
-                    id={props.id}
+                    id={id}
                     spellCheck="false"
-                    placeholder={props.placeholder}
-                    mask={props.mask}
-                    maskChar={props.maskChar}
-                    disabled={props.disabled}
+                    placeholder={placeholder}
+                    mask={mask}
+                    maskChar={maskChar}
+                    disabled={disabled}
                 />
-                {inputText}
+                {inputTextComponent}
             </div>
         </div>
     )

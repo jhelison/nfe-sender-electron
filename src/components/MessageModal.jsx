@@ -19,7 +19,7 @@ const MessageModal = (props) => {
             <label className="mt-5">{props.text}</label>
             <hr className="solid"/>
 
-            <div className="d-flex just-content-end grid-gap-10 mt-10">
+            <div className="d-flex just-content-end gap-10 mt-10">
                 {props.backButton ? (
                     <CustomButton
                         title="Cancelar"

@@ -11,10 +11,14 @@ import {
 const Settings = (props) => {
     return (
         <Content title="Configurações Gerais">
+            <form>
+                    <CustomTextInput label="Diretório geral para gerenciamentos dos arquivos XML" id="main-path" inputText="Selecionar pasta" isButton/>
+
+            </form>
             <div className="d-grid grid-1-1 gap-10">
-                    <CustomTextInput disabled label="asd" inputText="asd" isButton />
-                    <CustomTextInput label="asd"/>
+                    <CustomTextInput label="asd" inputText="Selecionar" isButton onClick={() => console.log("wow")}/>
             </div>
+                    <CustomButton label="ASD" sucess/>
         </Content>
     )
 }

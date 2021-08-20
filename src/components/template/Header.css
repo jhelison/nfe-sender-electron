@@ -14,14 +14,6 @@ header {
 header button {
     width: var(--header-height);
     height: var(--header-height);
-    transition: 0.2s;
-    transition: 0.2s all;
     cursor: default;
-}
-
-header button:hover {
-    background-color: rgba(0, 0, 0, 0.1);
-}
-header button:active {
-    background-color: rgba(0, 0, 0, 0.3);
+    background-color: var(--foreground-dark);
 }
